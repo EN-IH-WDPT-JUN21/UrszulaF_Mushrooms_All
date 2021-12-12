@@ -3,7 +3,8 @@
 
 Final project about Mushrooms by Urszula Figurska
 
-Back-end: https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Enterprise-Java-Development-7.08_part1.git
+Back-end: https://github.com/UrszulaF/UrszulaF_Mushrooms_Backend.git
+
 Front-end: https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Enterprise-Java-Development-7.08_part2.git
 
 
