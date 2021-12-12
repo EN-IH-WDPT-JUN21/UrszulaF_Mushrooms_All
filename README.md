@@ -85,7 +85,8 @@ You can create your own data the same way.
 ### API documentation - routes:
 These are the routes you can try and the permissions you will need to perform the action:
 
-#### gateway-service
+#### gateway-service (http://localhost:8000)
+Some of the routes require running user-service!
 
 | Endpoint | Method | Description | Path Params | Body| Token*
 | :--- | :--- | :--- | :---  | :--- | :--- 
@@ -98,7 +99,8 @@ These are the routes you can try and the permissions you will need to perform th
 | /api/users-auth/update/{username} | `PUT` | Update user info | `username=[String]`| Yes****  | Yes
 | /api/users-auth/delete/{username} | `DELETE` | Delete user info| `username=[String]`| None  | Yes
 
-* requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+*requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
 
 **POST /token - example body:
 
@@ -109,7 +111,7 @@ These are the routes you can try and the permissions you will need to perform th
 
 
 
-*** POST /api/users-auth/new - example body:
+***POST /api/users-auth/new - example body:
 
 
     {
@@ -121,14 +123,168 @@ These are the routes you can try and the permissions you will need to perform th
     "bio": "I'm user"
     }
 
-**** POST /api/users-auth/new - example body:
+****PUT /api/users-auth/update/{username} - example body:
 
     {
     "email": "felix@f.pl",
         "bio": "I'm great"
     }
 
+#### mushroom-service (http://localhost:8100)
 
+
+| Endpoint | Method | Description | Path Params | Body| Token*
+| :--- | :--- | :--- | :---  | :--- | :--- 
+| /api/mushrooms | `GET` | Get all mushrooms | None | None | No
+| /api/mushrooms/{mushroomName} | `GET` | Get mushrooms by mushroomName | `mushroomName=[String]` | None  | No
+| /api/mushrooms/id/{id} | `GET` | Get mushrooms by id | `id=[long]` | None  | No
+| /api/mushrooms/containing/{mushroomName} | `GET` | Get mushrooms by the part of mushroomName | `mushroomName=[String]` | None  | No
+| /api/mushrooms/new | `POST` | Add new mushroom | None | Yes**   | No
+| /api/mushrooms/update/{id} | `PUT` | Update mushroom info | `id=[long]`| Yes***  | No
+| /api/mushrooms/delete/{id} | `DELETE` | Delete mushroom info| `id=[long]`| None  | No
+
+
+*requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+**POST /api/mushrooms/new - example body:
+
+    {
+    "photoURL": "",
+    "mushroomName": "test",
+    "otherNames": "test",
+    "edible": true,
+    "consumable": "GREAT",
+    "whenFruiting": "summer-autumn",
+    "whereFruiting": "deciduous and coniferous forests, especially in mountains",
+    "hat": "3-10cm, yellow, at first convex, later concave, surface irregular, undulating, folded edge",
+    "stem": "massive, smooth, in the shape of an inverted cup",
+    "ring": "none",
+    "gills": "yellow, folded, twisted, bifurcated and running far away",
+    "tubes": "none",
+    "pulp": "yellowish, compact and fibrous",
+    "smell": "fruity",
+    "taste": "sweet to spicy",
+    "differentiation": "color from pale yellow to golden yellow, sometimes orange",
+    "similar": "false chanterelle",
+    "remarks": "",
+    "foodValue": "edible, delicious, it can be prepared in many ways"
+    }
+
+
+***PUT /api/mushrooms/update/{id} - example body:
+
+    {
+    "mushroomName": "change",
+    "otherNames": "change",
+    "edible": false
+    }
+
+#### event-service (http://localhost:8200)
+
+
+| Endpoint | Method | Description | Path Params | Body| Token*
+| :--- | :--- | :--- | :---  | :--- | :--- 
+| /api/events | `GET` | Get all events | None | None | No
+| /api/events/{eventName} | `GET` | Get events by eventName | `eventName=[String]` | None  | No
+| /api/events/id/{id} | `GET` | Get mushrooms by id | `id=[long]` | None  | No
+| /api/events/type/{eventType} | `GET` | Get events by eventType | `eventType=[String]` | None  | No
+| /api/events/new | `POST` | Add new event | None | Yes**   | No
+| /api/events/update/{id} | `PUT` | Update event info | `id=[long]`| Yes***  | No
+| /api/events/delete/{id} | `DELETE` | Delete event info| `id=[long]`| None  | No
+
+
+*requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+**POST /api/events/new - example body:
+
+    {
+    "eventName": "grzybobranie",
+    "eventType": "MUSHROOM_PICKING",
+    "whenEvent": "2022-07-01T09:00:00",
+    "duration": 500,
+    "whereEvent": "forest in Stara Milosna",
+    "contactPerson": "Ewa",
+    "description": "I invite you for June mushroom picking. Let me know if you want to come"
+    }
+
+
+***PUT /api/events/update/{id} - example body:
+
+    {
+    "whenEvent": "2022-08-01T09:00:00",
+    "duration": 500,
+    "whereEvent": "forest in Stara Radosna",
+    "contactPerson": "Ewa",
+    "description": "Postpone"
+    }
+
+#### user-service (http://localhost:8300)
+
+
+| Endpoint | Method | Description | Path Params | Body| Token*
+| :--- | :--- | :--- | :---  | :--- | :--- 
+| /api/users | `GET` | Get all users | None | None | No
+| /api/users/{username} | `GET` | Get users by username | `username=[String]` | None  | No
+| /api/users/id/{id} | `GET` | Get users by id | `id=[long]` | None  | No
+| /api/users/new | `POST` | Add new user | None | Yes**   | No
+| /api/users/update/{username} | `PUT` | Update user info | `username=[String]`| Yes***  | No
+| /api/users/delete/{username} | `DELETE` | Delete user info| `username=[String]`| None  | No
+
+
+*requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+**POST /api/users/new - example body:
+
+    {
+    "id": 7,
+    "photoURL": "sth",
+    "username": "Felix",
+    "bio": "I'm user"
+    }
+
+
+***PUT /api/users/update/{username} - example body:
+
+    {
+    "photoURL": "",
+    "bio": "I'm great"
+    }
+
+#### animal-service (http://localhost:8400)
+
+
+| Endpoint | Method | Description | Path Params | Body| Token*
+| :--- | :--- | :--- | :---  | :--- | :--- 
+| /api/animals | `GET` | Get all animals | None | None | No
+| /api/animals/{animalName} | `GET` | Get animals by animalName | `animalName=[String]` | None  | No
+| /api/animals/id/{id} | `GET` | Get animals by id | `id=[long]` | None  | No
+| /api/animals/containing/{animalName} | `GET` | Get animals by the part of animalName | `animalName=[String]` | None  | No
+| /api/animals/new | `POST` | Add new animal | None | Yes**   | No
+| /api/animals/update/{id} | `PUT` | Update animal info | `id=[long]`| Yes***  | No
+| /api/animals/delete/{id} | `DELETE` | Delete animal info| `id=[long]`| None  | No
+
+
+*requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+**POST /api/animals/new - example body:
+
+    {
+    "photoURL": "",
+    "animalName": "zwierzak",
+    "otherNames": "zwierz",
+    "animalType": "arachnid",
+    "animalSize": "12cm",
+    "description": "descr",
+    "remarks": "remark"
+    }
+
+
+***PUT /api/animals/update/{id} - example body:
+
+    {
+    "photoURL": "photo",
+    "animalName": "super zwierzak"
+    }
 
 ## Database diagram:
 ![diagram](https://user-images.githubusercontent.com/85784274/145723321-a48defdf-4976-4256-8e34-cda0457e4ff0.png)
