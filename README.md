@@ -61,14 +61,16 @@ FLUSH PRIVILEGES;
 
 There are 6 services: 
 
- <ol>
-    <li> discovery-service
-    <li> gateway-service
-    <li> user-service
-    <li> mushroom-service
-    <li> event-service
-    <li> animal-service      
-</ol>
+
+| Port | Service
+| :--- | :--- 
+| 8761 | discovery-service
+| 8000 | gateway-service
+| 8100 | mushroom-service
+| 8200 | event-service
+| 8300 | user-service
+| 8400 | animal-service     
+
 
 Go to the {{name}}ServiceApplication class in the `src` directory (\src\main\java\com\mushrooms\{{name}}service) and run main method in all of them in above order
 
@@ -83,51 +85,50 @@ You can create your own data the same way.
 ### API documentation - routes:
 These are the routes you can try and the permissions you will need to perform the action:
 
-<ol>
-  <li> Admin routes:
-      <ul> 
-        <li> Accounts: </li>
-        <ul>
-        <li> Method: GET -- Route: /accounts -- Response: Get all accounts </li>
-        <li> Method: GET -- Route: /accounts/{id} -- Response: Get account by account ID </li>
-        <li> Method: PATCH -- Route: /accounts/change-balance/{id} -- Response: Update balance amount by account ID </li>
-        <li> Method: PATCH -- Route: /accounts/change-status/{id} -- Response: Update status by account ID </li>
-        <li> Method: GET -- Route: /checking-accounts -- Response: Get all checking accounts </li>
-        <li> Method: POST -- Route: /checking-account/new -- Response: Create a new checking account </li>
-        <li> Method: GET -- Route: /credit-card-accounts -- Response: Get all credit cards accounts </li>
-        <li> Method: POST -- Route: /credit-card-account/new -- Response: Create a new credit card account </li>   
-        <li> Method: GET -- Route: /saving-accounts -- Response: Get all saving accounts </li>
-        <li> Method: POST -- Route: /saving-account/new -- Response: Create a new saving account </li>   
-        <li> Method: GET -- Route: /student-checking-accounts -- Response: Get all student checking accounts </li>
-        <li> Method: POST -- Route: /student-checking-account/new -- Response: Create a new student checking account </li>   
-        <li> Method: GET -- Route: /transactions -- Response: Get all transactions (internal) </li>
-        <li> Method: GET -- Route: /third-party-send-transactions -- Response: Get all third party send transactions </li>
-        <li> Method: GET -- Route: /third-party-receive-transactions -- Response: Get all third party send transactions </li>
-        </ul>        
-        <li> Account Holders: </li>
-        <ul>        
-            <li> Method: GET -- Route: /account-holders -- Response: Get all Account Holders </li>
-            <li> Method: GET -- Route: /account-holders/{id} -- Response: Get Account Holder by Account Holder ID </li>
-            <li> Method: POST -- Route: /account-holders/new -- Response: Create a new Account Holder </li>
-        </ul>        
-        <li> Third Parties: </li>
-        <ul>        
-        <li> Method: GET -- Route: /third-parties -- Response: Get all Third Parties </li>
-        <li> Method: POST -- Route: /third-parties/new -- Response: Create a new Third Party </li>    
-        </ul>        
-      </ul>    
-  </li>
-    <li> User routes:
-      <ul> 
-        <li> Method: GET -- Route: /my-accounts/primary/ -- Response: Get all primary accounts of a user by Account Holder ID </li>
-        <li> Method: GET -- Route: /my-accounts/secondary -- Response: Get all secondary accounts of a user by Account Holder ID </li>
-        <li> Method: GET -- Route: /my-accounts/{id}/balance -- Response: Get balance by account ID </li>
-        <li> Method: POST -- Route: /transfer -- Response: Make a transaction between accounts </li> 
-        <li> Method: POST -- Route: /third-party/send-money/{hashed-key} -- Response: Send money from accounts to Third Party by Hashed key</li> 
-      </ul>    
-  </li>
+#### gateway-service
 
-</ol>
+| Endpoint | Method | Description | Path Params | Body| Token*
+| :--- | :--- | :--- | :---  | :--- | :--- 
+| /token| `POST` | Generate JWT token | None | Yes** | No
+| /api/users-auth | `GET` | Get all users-auth DB info | None | None | Yes
+| /api/users-auth/all | `GET` | Get all users-auth + user DB info | None | None  | Yes
+| /api/users-auth/{username} | `GET` | Get users-auth + user DB info by username | `username=[String]` | None  | Yes
+| /api/users-auth/name/{username} | `GET` | Get usersname from DB | `username=[String]` | None  | No
+| /api/users-auth/new | `POST` | Add new user | None | Yes***   | Yes
+| /api/users-auth/update/{username} | `PUT` | Update user info | `username=[String]`| Yes****  | Yes
+| /api/users-auth/delete/{username} | `DELETE` | Delete user info| `username=[String]`| None  | Yes
+
+* requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
+
+**POST /token - example body:
+
+    {
+    "username": "Ula",
+    "password": "admin"
+    }
+
+
+
+*** POST /api/users-auth/new - example body:
+
+
+    {
+    "username": "Felix",
+    "email": "f@f.pl",
+    "password": "admin",
+    "role": "ADMIN",
+    "photoURL": "some photo",
+    "bio": "I'm user"
+    }
+
+**** POST /api/users-auth/new - example body:
+
+    {
+    "email": "felix@f.pl",
+        "bio": "I'm great"
+    }
+
+
 
 ## Database diagram:
 ![diagram](https://user-images.githubusercontent.com/85784274/145723321-a48defdf-4976-4256-8e34-cda0457e4ff0.png)
