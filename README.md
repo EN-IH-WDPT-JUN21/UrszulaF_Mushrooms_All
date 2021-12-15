@@ -318,7 +318,115 @@ To run this project locally do the following after cloning or downloading the pr
    <li> Open http://localhost:4200/ </li>  
 </ol>
 
-In order to see some information you have to register and login. If you don't wanto to register you can use sample data for example you can log in with username "Ula" and password "admin" in browser.
+### Guide
+
+<ol>
+  <li> Home page </li>
+  <ol>
+    <li> After opening in your browser, Home page will be shown. Here you can read basic guidlines for mushroom pickers. </li>
+    <li> When you decide what you want to do next select one of the buttons or pick option from Menu </li>
+    <li> You can change language from English to Polish (Menu ->Select Language). Translation still in progress. </li>
+  </ol>
+  <li> Register page </li>
+  <ol>  
+    <li> In order to see some information you have to register and login. </li>
+    <li> There are 3 types of Role: Standard user, Premium user (creative role: adds, update data) or Admin (administrator) </li>
+    <li> You can't register as Admin. This role is given on back-end side </li>
+  </ol>  
+  <li> Login page </li>
+  <ol> 
+    <li> After successful registration, you can log in. </li>
+    <li> If you don't want to register you can use sample data for example you can log in with username "Ula" and password "admin" in browser. </li>
+    <li> To see full capabilities log in as one of the users with Admin role (for example username "Ula" and password "admin"). </li>
+  </ol>
+  <li> User profile </li>
+  <ol> 
+    <li> After passing right credentials you will be redirected to User profile page. Here you can read your data, update some or all of them <li> 
+  </ol>
+  <li> Mushrooms</li>
+  <ol> 
+    <li> Here you can read about mushrooms that are mostly picked in Poland </li> 
+    <li> You can search by a part of name</li> 
+    <li> When you click inside the table it will show detailed information about selected mushroom </li> 
+    <li> (PREMIUM/ADMIN) Add mushroom button will take you to the form</li> 
+  </ol>
+  <li> New Mushroom </li>
+  <ol>
+     <li> Here you can add new mushroom to our database. Please send us photo via email.</li> 
+  </ol> 
+  <li> Mushroom details </li>
+  <ol>
+     <li> Here you can read more about selected mushroom and see some photos</li> 
+      <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
+      <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
+  </ol> 
+  <li> Mushroom update </li>
+  <ol>
+      <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
+  </ol> 
+  <li> Events</li>
+  <ol> 
+    <li> Here you can read about events that our members organize </li> 
+    <li> You can search by a type of event</li> 
+    <li> When you click inside the table it will show detailed information about selected event </li> 
+    <li> (PREMIUM/ADMIN) Add new event button will take you to the form</li> 
+  </ol>
+  <li> New Event </li>
+  <ol>
+     <li> Here you can add new event to our database.</li> 
+  </ol> 
+  <li> Event details </li>
+  <ol>
+     <li> Here you can read more about selected event</li> 
+      <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
+      <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
+  </ol> 
+  <li> Event update </li>
+  <ol>
+      <li> (PREMIUM/ADMIN) Here you can update data. </li> 
+  </ol>  
+    <li> Quiz </li>
+  <ol>
+      <li> Here you can check your knowledge if you know the mushrooms from our database. There is one important question "Is it edible? True or False" </li> 
+      <li> Select option and press check. You will see the answer immediately </li>
+       <li> Click next to see next question </li>
+       <li> At the end you will see your score and which answers you have right. </li>
+       <li> You can try again or go to Mushrooms page to improve your knowledge </li>
+  </ol>  
+    <li> Animals</li>
+  <ol> 
+    <li> Here you can read about animals mushroom picker can most often encounter in forests in Poland </li> 
+    <li> You can search by a part of name</li> 
+    <li> When you click inside the table it will show detailed information about selected animal </li> 
+    <li> (PREMIUM/ADMIN) Add animal button will take you to the form</li> 
+  </ol>
+  <li> New Animal </li>
+  <ol>
+     <li> Here you can add new animal to our database. Please send us photo via email.</li> 
+  </ol> 
+  <li> Animal details </li>
+  <ol>
+     <li> Here you can read more about selected animal and see some photos</li> 
+      <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
+      <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
+  </ol> 
+  <li> Animal update </li>
+  <ol>
+      <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
+  </ol> 
+      <li> (ADMIN) User list</li>
+  <ol> 
+    <li> (ADMIN) Here Admins can read about members </li> 
+    <li> (ADMIN) You can search by a part of name</li> 
+      <li> (ADMIN)  Update button will take you to the form to update data</li> 
+      <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
+  </ol> 
+    <li> Contact us </li>
+  <ol>
+      <li> Here you can read how to contact us </li> 
+  </ol> 
+</ol>
+
 
 Thank you,
 
