@@ -287,7 +287,8 @@ Some of the routes require running user-service!
     }
 
 ## Database diagram:
-![diagram](https://user-images.githubusercontent.com/85784274/145723321-a48defdf-4976-4256-8e34-cda0457e4ff0.png)
+![diagram](https://user-images.githubusercontent.com/85784274/146441011-9206a45d-7021-4a21-99a4-2b1b723fb698.png)
+
 
 Each service have separate database. In gateway service there is security information about users in user_auth and it's protected by JWT token. If you want to see this information you have to login in Mushroom page as a user write Autorization "Bearer {token}" in Postman 
 
@@ -341,7 +342,7 @@ To run this project locally do the following after cloning or downloading the pr
   </ol>
   <li> User profile </li>
   <ol> 
-    <li> After passing right credentials you will be redirected to User profile page. Here you can read your data, update some or all of them <li> 
+    <li> After passing right credentials you will be redirected to User profile page. Here you can read your data, update some or all of them </li> 
   </ol>
   <li> Mushrooms</li>
   <ol> 
