@@ -335,72 +335,116 @@ To run this project locally do the following after cloning or downloading the pr
 
 ### Guide
 
-<ol>
-  <li> Home page </li>
+#### Home page
+![image](https://user-images.githubusercontent.com/85784274/146531218-4cab0dca-95fc-45e2-a6c3-df7a23794092.png)
+
   <ol>
     <li> After opening in your browser, Home page will be shown. Here you can read basic guidlines for mushroom pickers. </li>
     <li> When you decide what you want to do next select one of the buttons or pick option from Menu </li>
     <li> You can change language from English to Polish (Menu ->Select Language). Translation still in progress. </li>
   </ol>
-  <li> Register page </li>
+  
+#### Register page 
+
+![image](https://user-images.githubusercontent.com/85784274/146531579-c224d392-0ef0-404f-a56e-b9c0b528ef97.png)
+  
+
   <ol>  
     <li> In order to see some information you have to register and login. </li>
     <li> There are 3 types of Role: Standard user, Premium user (creative role: adds, update data) or Admin (administrator) </li>
     <li> You can't register as Admin. This role is given on back-end side </li>
   </ol>  
-  <li> Login page </li>
+  
+#### Login page
+
+![image](https://user-images.githubusercontent.com/85784274/146534994-66eca347-e847-4325-bbdc-48ce51730a6e.png)
+
+
   <ol> 
     <li> After successful registration, you can log in. </li>
     <li> If you don't want to register you can use sample data for example you can log in with username "Ula" and password "admin" in browser. </li>
     <li> To see full capabilities log in as one of the users with Admin role (for example username "Ula" and password "admin"). </li>
   </ol>
-  <li> User profile </li>
+  
+#### User profile  
+
+![image](https://user-images.githubusercontent.com/85784274/146535175-36a82723-0667-41ad-ac78-8bef0845f82a.png)
+
+
   <ol> 
     <li> After passing right credentials you will be redirected to User profile page. Here you can read your data, update some or all of them </li> 
+      <li> You can also upload small picture in .jpeg file and add it to profile </li> 
   </ol>
-  <li> Mushrooms</li>
+  
+![image](https://user-images.githubusercontent.com/85784274/146535447-d241f306-4bc4-4621-a3b7-03a2e56d0f2c.png)
+![image](https://user-images.githubusercontent.com/85784274/146535587-562917b7-6005-442a-b792-cedfc0d25082.png)
+
+  
+  
+#### Mushrooms    
+
+
   <ol> 
     <li> Here you can read about mushrooms that are mostly picked in Poland </li> 
     <li> You can search by a part of name</li> 
     <li> When you click inside the table it will show detailed information about selected mushroom </li> 
     <li> (PREMIUM/ADMIN) Add mushroom button will take you to the form</li> 
   </ol>
-  <li> New Mushroom </li>
+  
+##### New Mushroom    
+
   <ol>
      <li> Here you can add new mushroom to our database. Please send us photo via email.</li> 
   </ol> 
-  <li> Mushroom details </li>
+  
+##### Mushroom details     
+
   <ol>
      <li> Here you can read more about selected mushroom and see some photos</li> 
       <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
       <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
   </ol> 
-  <li> Mushroom update </li>
+  
+##### Mushroom update     
+
   <ol>
       <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
   </ol> 
-  <li> Events</li>
+  
+#### Events    
+
   <ol> 
     <li> Here you can read about events that our members organize </li> 
     <li> You can search by a type of event</li> 
     <li> When you click inside the table it will show detailed information about selected event </li> 
     <li> (PREMIUM/ADMIN) Add new event button will take you to the form</li> 
   </ol>
-  <li> New Event </li>
+  
+##### New Event   
+
   <ol>
      <li> Here you can add new event to our database.</li> 
   </ol> 
-  <li> Event details </li>
+  
+##### Event details   
+
+
   <ol>
      <li> Here you can read more about selected event</li> 
       <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
       <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
   </ol> 
-  <li> Event update </li>
+  
+##### Event update   
+
+
   <ol>
       <li> (PREMIUM/ADMIN) Here you can update data. </li> 
   </ol>  
-    <li> Quiz </li>
+  
+ #### Quiz  
+
+
   <ol>
       <li> Here you can check your knowledge if you know the mushrooms from our database. There is one important question "Is it edible? True or False" </li> 
       <li> Select option and press check. You will see the answer immediately </li>
@@ -408,34 +452,50 @@ To run this project locally do the following after cloning or downloading the pr
        <li> At the end you will see your score and which answers you have right. </li>
        <li> You can try again or go to Mushrooms page to improve your knowledge </li>
   </ol>  
-    <li> Animals</li>
+  
+#### Animals 
+
+
+
   <ol> 
     <li> Here you can read about animals mushroom picker can most often encounter in forests in Poland </li> 
     <li> You can search by a part of name</li> 
     <li> When you click inside the table it will show detailed information about selected animal </li> 
     <li> (PREMIUM/ADMIN) Add animal button will take you to the form</li> 
   </ol>
-  <li> New Animal </li>
+  
+##### New Animal 
+
+
   <ol>
      <li> Here you can add new animal to our database. Please send us photo via email.</li> 
   </ol> 
-  <li> Animal details </li>
+  
+##### Animal details 
+
+
   <ol>
      <li> Here you can read more about selected animal and see some photos</li> 
       <li> (PREMIUM/ADMIN) Update button will take you to the form to update data</li> 
       <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
   </ol> 
-  <li> Animal update </li>
+  
+ ##### Animal update  
+
   <ol>
       <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
   </ol> 
-      <li> (ADMIN) User list</li>
+  
+ #### User list  
+
   <ol> 
     <li> (ADMIN) Here Admins can read about members </li> 
     <li> (ADMIN) You can search by a part of name</li> 
       <li> (ADMIN)  Update button will take you to the form to update data</li> 
       <li> (ADMIN) Delete button will delete information, but you will be asked to confirm</li> 
   </ol> 
+  
+ #### Contact us  
     <li> Contact us </li>
   <ol>
       <li> Here you can read how to contact us </li> 
