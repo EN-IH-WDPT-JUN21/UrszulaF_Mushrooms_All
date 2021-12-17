@@ -477,9 +477,13 @@ To run this project locally do the following after cloning or downloading the pr
        <li> At the end you will see your score and which answers you have right. </li>
        <li> You can try again or go to Mushrooms page to improve your knowledge </li>
   </ol>  
+
+![image](https://user-images.githubusercontent.com/85784274/146538292-ece9bfeb-38b3-4524-bf3b-de1b995bf6c3.png)
+
   
 #### Animals 
 
+![image](https://user-images.githubusercontent.com/85784274/146538478-8ae4cbdb-bc18-4628-bfc2-37949b9c2066.png)
 
 
   <ol> 
@@ -491,6 +495,8 @@ To run this project locally do the following after cloning or downloading the pr
   
 ##### New Animal 
 
+![image](https://user-images.githubusercontent.com/85784274/146538724-e90ae3fa-bb22-486e-957e-83336a863871.png)
+
 
   <ol>
      <li> Here you can add new animal to our database. </li> 
@@ -498,6 +504,8 @@ To run this project locally do the following after cloning or downloading the pr
   </ol> 
   
 ##### Animal details 
+
+![image](https://user-images.githubusercontent.com/85784274/146539056-eeb92653-eb20-40de-9d9e-4cb4cdbe6c0a.png)
 
 
   <ol>
@@ -508,12 +516,16 @@ To run this project locally do the following after cloning or downloading the pr
   
  ##### Animal update  
 
+![image](https://user-images.githubusercontent.com/85784274/146539125-7691f04c-782e-4c2c-97c1-931b69cc896e.png)
+
   <ol>
       <li> (PREMIUM/ADMIN) Here you can update data. </li> 
     <li> Please send us photo via email if you want to change it. In photo field write the name of the file you send. </li> 
   </ol> 
   
  #### User list  
+ 
+ ![image](https://user-images.githubusercontent.com/85784274/146539185-2aa94da4-83e9-42be-97d7-5468810a5f9b.png)
 
   <ol> 
     <li> (ADMIN) Here Admins can read about members </li> 
@@ -523,6 +535,9 @@ To run this project locally do the following after cloning or downloading the pr
   </ol> 
   
  #### Contact us  
+ 
+ ![image](https://user-images.githubusercontent.com/85784274/146539291-42167750-2346-4686-90b2-274b34da3e56.png)
+
     <li> Contact us </li>
   <ol>
       <li> Here you can read how to contact us </li> 
