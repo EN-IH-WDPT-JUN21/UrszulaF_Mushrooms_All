@@ -5,7 +5,7 @@ Final project about Mushrooms by Urszula Figurska
 
 Back-end: https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Mushrooms_Backend.git
 
-Front-end: https://github.com/UrszulaF/UrszulaF_Mushrooms_Frontend.git
+Front-end: https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Mushrooms_Frontend.git
 
 ## Intro
 This is Website for mushroom-picking fans. There is information about main mushrooms in Poland, rules and advices for mushroom pickers, events & some animals information.
@@ -35,7 +35,7 @@ This a list of minimum requirements to run the program:
 
 Clone/download the repo from this site:
    ```sh
-   git clone https://github.com/UrszulaF/UrszulaF_Mushrooms_Backend.git
+   git clone https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Mushrooms_Backend.git
    ```
 To run this project locally do the following after cloning or downloading the project:
 
@@ -307,7 +307,7 @@ This edge-service with user-auth DB for JWT token. Some of the routes require ru
 Each service have separate database. In gateway service there is security information about users in user_auth and it's protected by JWT token. If you want to see this information you have to login in Mushroom page as a user write Autorization "Bearer {token}" in Postman 
 
 ## Front-end
-Link: https://github.com/UrszulaF/UrszulaF_Mushrooms_Frontend.git
+Link: https://github.com/EN-IH-WDPT-JUN21/UrszulaF_Mushrooms_Frontend.git
 
 ### Prerequisites
 
