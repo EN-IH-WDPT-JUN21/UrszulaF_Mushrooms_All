@@ -62,14 +62,14 @@ FLUSH PRIVILEGES;
 There are 6 services: 
 
 
-| Port | Service
-| :--- | :--- 
-| 8761 | discovery-service
-| 8000 | gateway-service
-| 8100 | mushroom-service
-| 8200 | event-service
-| 8300 | user-service
-| 8400 | animal-service     
+| Port | Service| description
+| :--- | :--- | :--- 
+| 8761 | discovery-service | Eureka server
+| 8000 | gateway-service | edge-service with user-auth DB for JWT token
+| 8100 | mushroom-service | service with mushroom DB
+| 8200 | event-service | service with event DB
+| 8300 | user-service  | service with additional user info DB and photo DB
+| 8400 | animal-service  | service with animal DB    
 
 
 Go to the {{name}}ServiceApplication class in the `src` directory (\src\main\java\com\mushrooms\{{name}}service) and run main method in all of them in above order
@@ -86,7 +86,7 @@ You can create your own data the same way.
 These are the routes you can try and the permissions you will need to perform the action:
 
 #### gateway-service (http://localhost:8000)
-Some of the routes require running user-service!
+This edge-service with user-auth DB for JWT token. Some of the routes require running other services!
 
 | Endpoint | Method | Description | Path Params | Body| Token*
 | :--- | :--- | :--- | :---  | :--- | :--- 
@@ -94,9 +94,12 @@ Some of the routes require running user-service!
 | /api/users-auth | `GET` | Get all users-auth DB info | None | None | Yes
 | /api/users-auth/all | `GET` | Get all users-auth + user DB info | None | None  | Yes
 | /api/users-auth/{username} | `GET` | Get users-auth + user DB info by username | `username=[String]` | None  | Yes
-| /api/users-auth/name/{username} | `GET` | Get usersname from DB | `username=[String]` | None  | No
-| /api/users-auth/new | `POST` | Add new user | None | Yes***   | Yes
-| /api/users-auth/update/{username} | `PUT` | Update user info | `username=[String]`| Yes****  | Yes
+| /api/users-auth/name/{username} | `GET` | Get username from DB | `username=[String]` | None  | No
+| /api/users-auth/role/{username} | `GET` | Get role from DB | `username=[String]` | None  | No
+| /api/users-auth/containing/{username} | `GET` | Get users-auth + user DB info by part of username | `username=[String]` | None  | Yes
+| /api/users-auth/ | `POST` | Add new user | None | Yes***   | Yes
+| /api/users-auth/new | `POST` | Add new user + user DB info | None | Yes****   | Yes
+| /api/users-auth/update/{username} | `PUT` | Update user info | `username=[String]`| Yes*****  | Yes
 | /api/users-auth/delete/{username} | `DELETE` | Delete user info| `username=[String]`| None  | Yes
 
 
@@ -109,9 +112,19 @@ Some of the routes require running user-service!
     "password": "admin"
     }
 
+***POST /api/users-auth/ - example body:
 
 
-***POST /api/users-auth/new - example body:
+    {
+    "username": "Felix",
+    "email": "f@f.pl",
+    "password": "admin",
+    "role": "ADMIN",
+    "photoURL": "",
+    "bio": ""
+    }
+
+****POST /api/users-auth/new - example body:
 
 
     {
@@ -123,7 +136,7 @@ Some of the routes require running user-service!
     "bio": "I'm user"
     }
 
-****PUT /api/users-auth/update/{username} - example body:
+*****PUT /api/users-auth/update/{username} - example body:
 
     {
     "email": "felix@f.pl",
@@ -229,7 +242,8 @@ Some of the routes require running user-service!
 | /api/users/new | `POST` | Add new user | None | Yes**   | No
 | /api/users/update/{username} | `PUT` | Update user info | `username=[String]`| Yes***  | No
 | /api/users/delete/{username} | `DELETE` | Delete user info| `username=[String]`| None  | No
-
+| /image/get/{imageName} | `GET` | Get image by imageName (with extension example .jpg) | `imageName=[String]` | None  | No
+| /image/upload/ | `POST` | Add new photo | None | Yes (image file)   | No
 
 *requires token - first generate token by POST /token method and then use in Postman as new Header Authorization + Bearer {{token}}
 
