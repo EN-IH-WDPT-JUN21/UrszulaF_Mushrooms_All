@@ -1,4 +1,4 @@
-# Mushrooms Webpage 
+# Mushrooms Project 
 
 
 Final project about Mushrooms by Urszula Figurska
@@ -8,7 +8,7 @@ Back-end: https://github.com/UrszulaF/UrszulaF_Mushrooms_Backend.git
 Front-end: https://github.com/UrszulaF/UrszulaF_Mushrooms_Frontend.git
 
 ## Intro
-This is Webpage for mushroom-picking fans. There is information about main mushrooms in Poland, rules and advices for mushroom pickers, events & some animals information.
+This is Website for mushroom-picking fans. There is information about main mushrooms in Poland, rules and advices for mushroom pickers, events & some animals information.
 
 It allows to:
 <ul>
@@ -383,6 +383,8 @@ To run this project locally do the following after cloning or downloading the pr
   
 #### Mushrooms    
 
+![image](https://user-images.githubusercontent.com/85784274/146535850-7a4eb9f8-1754-44d1-b3a1-bb1b0170d548.png)
+
 
   <ol> 
     <li> Here you can read about mushrooms that are mostly picked in Poland </li> 
@@ -393,11 +395,18 @@ To run this project locally do the following after cloning or downloading the pr
   
 ##### New Mushroom    
 
+![image](https://user-images.githubusercontent.com/85784274/146536103-dbd13f86-3910-4261-8b1e-5b338d3f6717.png)
+
+
   <ol>
-     <li> Here you can add new mushroom to our database. Please send us photo via email.</li> 
+     <li> Here you can add new mushroom to our database. </li> 
+    <li> Please send us photo via email. In photo field write the name of the file you send. </li> 
   </ol> 
   
 ##### Mushroom details     
+
+![image](https://user-images.githubusercontent.com/85784274/146535984-74b470be-432c-438a-a6c2-c4b2e2d93d74.png)
+
 
   <ol>
      <li> Here you can read more about selected mushroom and see some photos</li> 
@@ -407,11 +416,18 @@ To run this project locally do the following after cloning or downloading the pr
   
 ##### Mushroom update     
 
+![image](https://user-images.githubusercontent.com/85784274/146536626-de35a6b7-b014-4aac-a47e-a9cc126cc31a.png)
+
+
   <ol>
-      <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
+  <li> (PREMIUM/ADMIN) Here you can update data.</li>
+  <li> Please send us photo via email if you want to change it. In photo field write the name of the file you send. </li> 
   </ol> 
   
-#### Events    
+#### Events   
+
+![image](https://user-images.githubusercontent.com/85784274/146536693-bb7959cb-34f0-4c15-b6b9-6d3866541ca6.png)
+
 
   <ol> 
     <li> Here you can read about events that our members organize </li> 
@@ -422,11 +438,16 @@ To run this project locally do the following after cloning or downloading the pr
   
 ##### New Event   
 
+![image](https://user-images.githubusercontent.com/85784274/146536779-f34828ac-6bf7-407d-a392-9ddb56bc1c70.png)
+
+
   <ol>
      <li> Here you can add new event to our database.</li> 
   </ol> 
   
 ##### Event details   
+
+![image](https://user-images.githubusercontent.com/85784274/146536864-f2134ca8-e3b4-455c-bb7e-16f12ff8e694.png)
 
 
   <ol>
@@ -437,12 +458,16 @@ To run this project locally do the following after cloning or downloading the pr
   
 ##### Event update   
 
+![image](https://user-images.githubusercontent.com/85784274/146536963-5da7a433-ef1b-4598-9d86-8c023cb428eb.png)
+
 
   <ol>
       <li> (PREMIUM/ADMIN) Here you can update data. </li> 
   </ol>  
   
  #### Quiz  
+
+![image](https://user-images.githubusercontent.com/85784274/146537886-14d765f2-ce30-41cb-a5f3-223b91c1b544.png)
 
 
   <ol>
@@ -468,7 +493,8 @@ To run this project locally do the following after cloning or downloading the pr
 
 
   <ol>
-     <li> Here you can add new animal to our database. Please send us photo via email.</li> 
+     <li> Here you can add new animal to our database. </li> 
+    <li> Please send us photo via email. In photo field write the name of the file you send. </li> 
   </ol> 
   
 ##### Animal details 
@@ -483,7 +509,8 @@ To run this project locally do the following after cloning or downloading the pr
  ##### Animal update  
 
   <ol>
-      <li> (PREMIUM/ADMIN) Here you can update data. Please send us photo via email if you want to change it. </li> 
+      <li> (PREMIUM/ADMIN) Here you can update data. </li> 
+    <li> Please send us photo via email if you want to change it. In photo field write the name of the file you send. </li> 
   </ol> 
   
  #### User list  
